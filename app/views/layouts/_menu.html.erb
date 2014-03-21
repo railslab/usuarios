@@ -1,0 +1,9 @@
+<ul class="nav navbar-nav">
+  <li class="<%= 'active' if request.path == root_path %>">
+    <%= link_to 'Home', root_path %>
+  </li>
+
+  <li class="<%= 'active' if request.path == usuarios_path %>">
+    <%= link_to 'Usuários', usuarios_path %>
+  </li>
+</ul>

@@ -1,0 +1,12 @@
+<%= form_tag session_path, class: 'form-inline text-center', autocomplete: 'off' do %>
+
+  <%= email_field_tag 'email', '', class: 'form-control input-lg',
+                                   autofocus: 'autofocus',
+                                   placeholder: 'email',
+                                   style: 'width: 300px' %>
+
+  <%= password_field_tag 'password', '', class: 'form-control input-lg', placeholder: 'senha' %>
+
+  <%= submit_tag 'entrar', class: 'btn btn-lg btn-primary' %>
+
+<% end %>

@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <%= link_to 'App', root_path, class: 'navbar-brand' %>
+    </div>
+
+    <%= render 'layouts/menu' %>
+
+    <% if usuario_logado %>
+    <strong class="navbar-text navbar-right">
+      <%= usuario_logado.nome %>
+    </strong>
+    <% end %>
+
+    <ul class="nav navbar-nav navbar-right">
+      <% unless logado? %>
+      <li class="<%= 'active' if request.path == login_path %>">
+        <%= link_to 'login', login_path %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to 'logout', logout_path %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
